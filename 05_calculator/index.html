@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" ng-app="calculator">
+    <head>
+        <meta charset="utf-8">
+        <title>Whole Blood Calculator</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/app.css">
+        <script src="lib/angular/angular.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/directives.js"></script>
+      
+        <style>
+      
+      
+        </style>
+    </head>
+    <body  ng-controller="calcCtrl">
+        <div class="container-fluid">
+            <wbcalc item="hoursOfStore"               type="input" unit="hours"></wbcalc>
+            <wbcalc item="numberOfEmployees"          type="input" unit="employees"></wbcalc>
+            <wbcalc item="processingTimePerPhone"     type="input" unit="minutes"></wbcalc>
+            <wbcalc item="grossSalePerPhone"          type="input" unit="dollars"></wbcalc>
+            <wbcalc item="hourlyWagePerEmployee"      type="input" unit="dollars"></wbcalc>
+            <wbcalc item="costPerPhone"               type="input" unit="dollars"></wbcalc>
+            <wbcalc item="dailyStoreLease"            type="input" unit="dollars"></wbcalc>
+            <wbcalc item="phonesSoldPerPersonPerHour" type="calc"  unit="phones"></wbcalc>
+            <wbcalc item="phonesSoldPerDay"           type="calc"  unit="phones"></wbcalc>
+            <wbcalc item="totalGrossPerDay"           type="calc"  unit="dollars"></wbcalc>
+            <wbcalc item="operatingCostPerDay"        type="calc"  unit="dollars"></wbcalc>
+            <wbcalc item="netProfit"                  type="calc"  unit="dollars"></wbcalc>
+
+        </div>
+    </body>
+</html>
