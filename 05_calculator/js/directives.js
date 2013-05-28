@@ -1,10 +1,10 @@
-angular.module('calculator', []).directive('wbcalc', function($compile) {
+angular.module('calculator', []).directive('calc', function($compile) {
     return {
         restrict: 'E',
         link: function(scope, element, attrs) {
-            var html = "<div class='row-fluid" + (attrs.type == 'calc' ? " sum" : "") + "'>";
+            var html = "<div class='row-fluid" + (attrs.type == 'calc' ? " val" : "") + "'>";
             var title = attrs.item.camelToProper();
-            html += "<div class='span3 title'>" + title + "</div><div class='span1'>";
+            html += "<div class='span5 title'>" + title + "</div><div class='span2'>";
             if (attrs.type == 'input') {
                 html += "<input ng-model='" + attrs.item + "' size='3'>";
             } else {
@@ -14,29 +14,28 @@ angular.module('calculator', []).directive('wbcalc', function($compile) {
                 }
                 html += "{{" + attrs.item + "() | " + filter + "}}";
             }
-            html += "</div><div class='span3'>" + attrs.unit;
+            html += "</div><div class='span5'>" + attrs.unit;
             html += "</div>";
             element.append($compile(html)(scope));
         }
     }
 });
 String.prototype.camelToProper = function () {
- if (this == null || this == "") {
-  return this;
- }
- var newText = "";
- var characters = this.split("");
- characters[0] = characters[0].toUpperCase();
- for (var i = 0; i < characters.length; i++) {
-  if (characters[i] == characters[i].toUpperCase()
- && i != 0
- && !(characters[i + 1] == characters[i + 1].toUpperCase())
- && characters[i - 1] != " ") {
- newText += " ";
-  }
-  newText += characters[i];
- }
+    if (this == null || this == "") {
+       return this;
+    }
+    var newText = "";
+    var characters = this.split("");
+    characters[0] = characters[0].toUpperCase();
+    for (var i = 0; i < characters.length; i++) {
+        if (characters[i] == characters[i].toUpperCase() && i != 0
+            && !(characters[i + 1] == characters[i + 1].toUpperCase())
+            && characters[i - 1] != " ") {
+            newText += " ";
+        }
+        newText += characters[i];
+    }
 
- return newText;
+    return newText;
 }
 
