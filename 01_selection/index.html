@@ -1,14 +1,21 @@
 <!doctype html>
 <html ng-app>
   <head>
-    <title>Hide and Show</title>
+    <title>Selection</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.js"></script>
   </head>
   <body>
-      <input ng-model="showContent" type="checkbox">
-      <div ng-show="showContent">
-          Checkbox shows and hides this content
-      </div>
-        
+      <input type="checkbox" ng-model="hideshow">Hide/Show Select
+      <div ng-show="hideshow">
+        <select ng-model="selectContent">
+          <option value="Choice one">First choice</option>
+          <option value="Choice two">Second choice</option>
+          <option value="Choice three">Third choice</option>
+        </select>
+        <div>
+            {{selectContent}}
+        </div>
+      </div>  
   </body>
 </html>
+

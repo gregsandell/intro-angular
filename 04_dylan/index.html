@@ -2,13 +2,15 @@
 <html ng-app="myapp" >
 <head>
   <meta charset="utf-8">
-  <title>Simple Directive Example</title>
+  <title>AngularJS Plunker</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.js"></script>
+  <script src="app.js"></script>
+  <script src="directives.js"></script>
   <script>
-    angular.module('myapp', []).directive('transcludeMe', function($compile) {
+    angular.module('myapp').directive('bobDylan', function($compile) {
         return {
             restrict: 'E',
-            template: "<div>The answer, my friend,<div ng-transclude></div>the answer is blowin' in the wind</div>",
+            template: "<div>The answer, my friend,<div ng-transclude></div>the answer <div ng-transclude></div></div>",
             replace: true,
             transclude: true
         };
@@ -16,6 +18,7 @@
   </script>
 </head>
 <body>
-  <transclude-me>is blowin' in the wind</transclude-me>
+  <bob-dylan>is blowin' in the wind</bob-dylan>
 </body>
 </html>
+
