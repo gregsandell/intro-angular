@@ -5,16 +5,7 @@
     <meta charset="utf-8">
     <title>Custom Plunker</title>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
-    <script>
-      angular.module("firstLast", []);
-      angular.module("firstLast").controller("FirstLastCtrl", function($scope) {
-        $scope.firstName = "";
-        $scope.lastName = "";
-        $scope.getName = function() {
-          return $scope.firstName + " " + $scope.lastName;
-        };
-      });      
-    </script>
+    <script src="src/FirstLastCtrl.js"></script>
   </head>
   
   <body ng-controller="FirstLastCtrl">
