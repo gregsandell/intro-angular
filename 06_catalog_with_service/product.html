@@ -1,0 +1,11 @@
+<div>
+    <h1>{{product.name}}</h1>
+    <h3>Features:</h3>
+    <ul>
+        <li ng-repeat="feature in product.features">
+            {{feature}}
+        </li>
+    </ul>
+    Price:  {{product.price  | currency:"$"}}
+</div>
+

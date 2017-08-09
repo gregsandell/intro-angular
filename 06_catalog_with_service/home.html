@@ -1,0 +1,6 @@
+<div>
+    <h1>Store Catalog</h1>
+      <div ng-repeat="(sku, record) in products">
+          <a href="#/product/{{sku}}">{{products[sku].name}}</a>
+      </div>
+</div>
