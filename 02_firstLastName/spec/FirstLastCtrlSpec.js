@@ -3,12 +3,13 @@ describe('FirstLastCtrl function', function() {
 describe('FirstLastCtrl', function() {
   var $scope;
 
-  beforeEach(module('firstLast'));
-
-  beforeEach(inject(function($rootScope, $controller) {
-    $scope = $rootScope.$new();
-    $controller('FirstLastCtrl', {$scope: $scope});
-  }));
+  beforeEach(function() {
+    module('firstLast');
+    inject(function($rootScope, $controller) {
+      $scope = $rootScope.$new();
+      $controller('FirstLastCtrl', {$scope: $scope});
+    })
+  });
 
   it('should set the value "Greg Sandell"', function() {
     $scope.firstName = "Greg";

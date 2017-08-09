@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="filterApp">
+  
+  <head lang="en">
+    <meta charset="utf-8">
+    <title>Using a Filter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="src/app.js"></script>
+  </head>
+  
+  <body>
+    Number 34.566778 becomes {{ 34.566778 | DollarFilter }}
+    <br/>Number 1234567.888888 becomes {{ 1234567.888888 | DollarFilter }}
+    <br>Number 34 becomes {{ 34 | DollarFilter }}
+    <br/>Number -1 becomes {{ -1 | DollarFilter }}
+    <br/>String '56.234532' becomes  {{ '56.234532' | DollarFilter }}
+    <br/>String '$1278523.4534223' becomes {{ '$278523.4534223' | DollarFilter }}
+    <br/>String '1,234,543.999999' becomes {{ '234,543.999999' | DollarFilter }}
+    <br/>String '-$3432567.888' becomes {{ '-$3,432,567.888' | DollarFilter }}
+    <br/>String '$-123.22' becomes {{ '$-123.22' | DollarFilter }}
+    <br/>String 'xyz' becomes {{ 'xyz' | DollarFilter }}
+  </body>
+
+</html>
